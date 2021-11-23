@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;500&display=swap");
+
+:root {
+  --lightblue: #119da4;
+  --dark: #202020;
+  --lightgreen: #02c39a;
+  --purple: #531cb3;
+  --lightgray: #e0dede;
+
+  --menu-bar: 65px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  background: var(--dark);
+}
+
+body,
+button,
+input,
+textarea {
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+h1 {
+  font-size: 44px;
+  margin: 0;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: 200;
+}
+
+p {
+  color: var(--lightgray);
+  font-weight: 300;
+}
+
+button {
+  background: var(--purple);
+  border: 0;
+  border-radius: 16px;
+  padding: 8px 35px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+header {
+  height: calc(100vh - var(--menu-bar));
+  display: flex;
+  align-items: center;
+}
+
+header .container {
+  width: 60%;
+  padding: 0 100px;
+  height: fit-content;
+}
+
+header .container h1 {
+  color: var(--lightblue);
+  font-weight: 300;
+}
+
+header .container button {
+  margin-top: 2rem;
+}
+
+nav {
+  height: var(--menu-bar);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+
+  padding: 0 100px;
+  background: var(--dark);
+}
+
+nav ul a {
+  margin: 0 2rem;
+  font-size: 18px;
+  color: var(--lightblue);
+  text-decoration: none;
+}
+
+.img img {
+  height: 55px;
+}
+
+section {
+  height: 1550px;
+}
