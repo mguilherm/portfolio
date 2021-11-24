@@ -31,6 +31,7 @@ textarea {
 h1 {
   font-size: 44px;
   margin: 0;
+  line-height: 2.5rem;
 }
 
 h2 {
@@ -75,6 +76,10 @@ header .container button {
   margin-top: 2rem;
 }
 
+header .container .img {
+  display: none;
+}
+
 nav {
   height: var(--menu-bar);
   display: flex;
@@ -87,8 +92,16 @@ nav {
   background: var(--dark);
 }
 
-nav ul a {
-  margin: 0 2rem;
+nav .menu-bar {
+  width: 70%;
+}
+
+nav .menu-bar ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav .menu-bar ul a {
   font-size: 18px;
   color: var(--lightblue);
   text-decoration: none;
@@ -100,4 +113,51 @@ nav ul a {
 
 section {
   height: 1550px;
+}
+
+@media (max-width: 1000px) {
+  header .container {
+    width: 100%;
+  }
+
+  nav .menu-bar {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 30px;
+  }
+  nav .img {
+    display: none;
+  }
+
+  header .container .img {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+
+  header .container {
+    padding: 0 30px;
+  }
+  nav .menu-bar ul {
+    padding: 0;
+  }
+  nav .menu-bar ul a {
+    font-size: 85%;
+  }
+}
+
+@media (max-width: 428px) {
+  h1 {
+    font-size: 35px;
+  }
+  p {
+    font-size: 90%;
+  }
+  header .container button {
+    margin-top: 1rem;
+  }
 }
