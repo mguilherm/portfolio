@@ -28,12 +28,6 @@ textarea {
   color: white;
 }
 
-h1 {
-  font-size: 44px;
-  margin: 0;
-  line-height: 2.5rem;
-}
-
 h2 {
   font-size: 24px;
   margin: 0;
@@ -55,6 +49,22 @@ button {
   font-size: 18px;
 }
 
+.title-blue {
+  color: var(--lightblue);
+  font-size: 44px;
+  margin: 0;
+  line-height: 2.5rem;
+  font-weight: 300;
+}
+
+.title-green {
+  color: var(--lightgreen);
+  font-size: 44px;
+  margin: 0;
+  line-height: 2.5rem;
+  font-weight: 300;
+}
+
 header {
   height: calc(100vh - var(--menu-bar));
   display: flex;
@@ -65,11 +75,6 @@ header .container {
   width: 60%;
   padding: 0 100px;
   height: fit-content;
-}
-
-header .container h1 {
-  color: var(--lightblue);
-  font-weight: 300;
 }
 
 header .container button {
@@ -115,8 +120,25 @@ nav .menu-bar ul a svg {
   height: 55px;
 }
 
-section {
-  height: 1550px;
+.about-me {
+  display: flex;
+  padding: 100px;
+}
+
+.about-me .img-container {
+  width: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.about-me .img-container img {
+  width: 50%;
+}
+
+.about-me .container {
+  width: 50%;
+  padding-right: 50px;
+  margin: auto;
 }
 
 @media (max-width: 1000px) {
@@ -166,6 +188,10 @@ section {
   }
 
   nav {
+    position: fixed;
+    bottom: 0;
+    top: unset;
+    width: 100%;
     padding: 0 15px;
   }
 
