@@ -107,6 +107,10 @@ nav .menu-bar ul a {
   text-decoration: none;
 }
 
+nav .menu-bar ul a svg {
+  display: none;
+}
+
 .img img {
   height: 55px;
 }
@@ -159,5 +163,17 @@ section {
   }
   header .container button {
     margin-top: 1rem;
+  }
+  nav {
+    padding: 0 15px;
+  }
+
+  nav .menu-bar ul a {
+    font-size: 10px;
+  }
+
+  nav .menu-bar ul a svg {
+    display: block;
+    margin: 0 auto 0.5rem;
   }
 }
