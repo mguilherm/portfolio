@@ -92,7 +92,7 @@ nav {
   justify-content: space-between;
   position: sticky;
   top: 0;
-
+  z-index: 99;
   padding: 0 100px;
   background: var(--dark);
 }
@@ -135,10 +135,11 @@ nav .menu-bar ul a svg {
 .about-me .img-container img {
   width: 50%;
   height: 100%;
+  object-fit: cover;
 }
 
 .about-me .img-container .line {
-  width: calc(60%);
+  width: calc(50% + 50px);
   height: calc(100% + 50px);
   border: 1px solid var(--lightblue);
   position: absolute;
@@ -165,8 +166,23 @@ nav .menu-bar ul a svg {
   nav .menu-bar {
     width: 100%;
   }
-}
 
+  .about-me {
+    flex-direction: column;
+  }
+  .about-me .container,
+  .about-me .img-container {
+    width: 100%;
+  }
+
+  .about-me .container {
+    padding-right: 0;
+  }
+
+  .about-me .img-container {
+    margin: 70px 0;
+  }
+}
 @media (max-width: 768px) {
   nav {
     padding: 0 30px;
@@ -189,6 +205,10 @@ nav .menu-bar ul a svg {
   }
   nav .menu-bar ul a {
     font-size: 85%;
+  }
+
+  .about-me {
+    padding: 40px;
   }
 }
 
