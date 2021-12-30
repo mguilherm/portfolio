@@ -23,7 +23,11 @@
           bit more about my professional skills and journay! Welcome to my
           portfolio, I'm glad to see you here. Let's chat!
         </p>
-        <button>contact me</button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?phone=+55061983420512')"
+        >
+          contact me
+        </button>
       </div>
     </header>
     <nav>
@@ -32,15 +36,15 @@
       </div>
       <div class="menu-bar">
         <ul>
-          <a href=""><i data-feather="user"></i>About me</a>
-          <a href=""><i data-feather="briefcase"></i>Services</a>
-          <a href=""><i data-feather="image"></i>Portfolio</a>
-          <a href=""><i data-feather="list"></i>Resume</a>
-          <a href=""><i data-feather="send"></i>Contact</a>
+          <a href="#aboutme"><i data-feather="user"></i>About me</a>
+          <a href="#services"><i data-feather="briefcase"></i>Services</a>
+          <a href="#portfolio"><i data-feather="image"></i>Portfolio</a>
+          <a href="#resume"><i data-feather="list"></i>Resume</a>
+          <a href="#contact"><i data-feather="send"></i>Contact</a>
         </ul>
       </div>
     </nav>
-    <section class="about-me">
+    <section id="aboutme" class="about-me">
       <div class="container">
         <h1 class="title-green">About me</h1>
         <p>
@@ -65,6 +69,156 @@
         />
       </div>
     </section>
+    <section id="services" class="services">
+      <h1 class="title-green">Services</h1>
+      <div class="services-container">
+        <div class="service-card">
+          <i data-feather="code"></i>
+          <h2>Website Development</h2>
+          <p>
+            Tenha um site exclusivo para você ou sua empresa e faça seu negócio
+            ser achado na Internet.
+          </p>
+        </div>
+        <div class="service-card">
+          <i data-feather="pen-tool"></i>
+          <h2>Web Designer</h2>
+          <p>
+            Crie sua identidade visual, branding, posts para redes sociais,
+            criação de logos e criativos para captação em lançamentos.
+          </p>
+        </div>
+        <div class="service-card">
+          <i data-feather="globe"></i>
+          <h2>WEB Aplications Development</h2>
+          <p>
+            Tenha um sistema gerencial feito sob medida para sua necessidade.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="portfolio" class="portfolio">
+      <h1 class="title-green">Portfolio</h1>
+      <div class="portfolio-container">
+        <div class="portfolio-card">
+          <div class="img-container">
+            <div class="line green"></div>
+            <img src="./source/img.png" alt="img-portfolio" />
+          </div>
+          <div class="language-container">
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JS</li>
+            </ul>
+          </div>
+          <p><b>Project #01</b></p>
+          <p>description of this Project</p>
+        </div>
+        <div class="portfolio-card">
+          <div class="img-container">
+            <div class="line green"></div>
+            <img src="./source/img.png" alt="img-portfolio" />
+          </div>
+          <div class="language-container">
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JS</li>
+            </ul>
+          </div>
+          <p><b>Project #02</b></p>
+          <p>description of this Project</p>
+        </div>
+        <div class="portfolio-card">
+          <div class="img-container">
+            <div class="line green"></div>
+            <img src="./source/img.png" alt="img-portfolio" />
+          </div>
+          <div class="language-container">
+            <ul>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>JS</li>
+            </ul>
+          </div>
+          <p><b>Project #03</b></p>
+          <p>description of this Project</p>
+        </div>
+      </div>
+    </section>
+    <section id="resume" class="resume">
+      <h1 class="title-green">Resume</h1>
+      <div class="container">
+        <div class="image-container">
+          <img src="./source/resume.png" alt="resume-file" />
+        </div>
+        <div class="personal-info-container">
+          <div class="personal-info">
+            <p>Name</p>
+            <p><b>Marcos Guilherme Barbosa da Silva</b></p>
+            <p>Age</p>
+            <p><b>23 years old</b></p>
+            <p>Graduation</p>
+            <p><b>System Analysis and Development - UNIP 2021</b></p>
+            <p>City</p>
+            <p><b>Brasília - DF</b></p>
+            <p>Phone</p>
+            <p><b>+55 061 983420512</b></p>
+            <p>Email</p>
+            <p><b>marcosguilherme.silva@outlook.com</b></p>
+            <p>Freelancer</p>
+            <p><b>Avaliable</b></p>
+            <p>Experience</p>
+            <p><b>HTML, CSS, JS, React, VueJS, SCRUM</b></p>
+            <p>Idioms</p>
+            <p><b>Portuguese (Native)</b></p>
+            <p></p>
+            <p><b>English (Advanced)</b></p>
+            <p></p>
+            <p><b>Spanish (Intermediate)</b></p>
+          </div>
+          <div class="secondary-button">
+            <button
+              onclick="window.open('https://api.whatsapp.com/send?phone=+55061983420512')"
+            >
+              <i data-feather="file-text"></i>
+              download my full resume
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact">
+      <h1 class="title-green">Let`s work together?</h1>
+      <p>Call me and lets work!</p>
+      <button>
+        <a
+          href="https://api.whatsapp.com/send?phone=+55061983420512"
+          target="_blanck"
+          >Contact Me</a
+        >
+      </button>
+      <div class="social-media">
+        <a
+          href="https://www.linkedin.com/in/marcos-guilherme-barbosa-da-silva"
+          target="_blanck"
+          ><i data-feather="linkedin"></i
+        ></a>
+        <a href="mailto:marcosguilherme.silva@outlook.com" target="_blanck"
+          ><i data-feather="mail"></i
+        ></a>
+        <a href="https://github.com/mguilherm" target="_blanck"
+          ><i data-feather="github"></i
+        ></a>
+        <a
+          href="https://api.whatsapp.com/send?phone=+55061983420512"
+          target="_blanck"
+          ><i data-feather="phone"></i
+        ></a>
+      </div>
+    </section>
+    <footer>Made by Marcos Guilherme Silva - 2021</footer>
 
     <script>
       feather.replace();

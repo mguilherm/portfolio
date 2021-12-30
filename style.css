@@ -14,6 +14,9 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 html,
 body {
   margin: 0;
@@ -39,6 +42,11 @@ p {
   font-weight: 300;
 }
 
+a {
+  text-decoration: none;
+  color: var(--lightgray);
+}
+
 button {
   background: var(--purple);
   border: 0;
@@ -47,12 +55,25 @@ button {
   color: white;
   font-weight: bold;
   font-size: 18px;
+  cursor: pointer;
+}
+
+.secondary-button button {
+  padding: 1rem 2rem;
+  background: var(--lightblue);
+  border: 1px solid var(--lightgreen);
+  display: flex;
+  align-items: center;
+}
+
+.secondary-button svg {
+  margin-right: 1rem;
 }
 
 .title-blue {
   color: var(--lightblue);
   font-size: 44px;
-  margin: 0;
+  margin: 3rem 0;
   line-height: 2.5rem;
   font-weight: 300;
 }
@@ -134,6 +155,7 @@ nav .menu-bar ul a svg {
 
 .about-me .img-container img {
   width: 50%;
+  max-width: 300px;
   height: 100%;
   object-fit: cover;
 }
@@ -158,7 +180,164 @@ nav .menu-bar ul a svg {
   margin: auto;
 }
 
-@media (max-width: 1000px) {
+.services {
+  text-align: center;
+  padding: 0;
+}
+
+.services h1 {
+  padding-top: 150px;
+}
+
+.services-container,
+.portfolio-container {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 60px auto;
+}
+
+.services .services-container .service-card {
+  max-width: 360px;
+  background: #2f3034;
+  border: 1px solid var(--lightblue);
+  border-radius: 16px;
+  padding: 40px 25px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.services .services-container .service-card svg {
+  color: var(--lightblue);
+  margin: 0 auto 40px;
+}
+
+.service-card + .service-card {
+  margin-left: 10px;
+}
+
+.portfolio {
+  background: url(./source/bg.png);
+  height: 800px;
+  text-align: center;
+  padding: 6rem 0;
+}
+.portfolio .portfolio-container {
+  margin-top: 100px;
+}
+.portfolio .portfolio-container .portfolio-card {
+  background: radial-gradient(
+    100% 100% at 0% 0%,
+    rgba(255, 255, 255, 0.33) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(42px);
+  border-radius: 16px;
+  border: 1px solid white;
+  max-width: 360px;
+  padding: 56px 16px;
+}
+
+.portfolio .portfolio-container .portfolio-card .img-container {
+  margin: 0 25px 50px;
+  position: relative;
+}
+
+.portfolio .portfolio-container .portfolio-card .img-container .line.green {
+  width: calc(100% + 24px);
+  height: calc(100% + 24px);
+  border: 1px solid var(--lightblue);
+  border-radius: 16px;
+  transform: rotate(-1.93deg);
+  position: absolute;
+  top: -12px;
+  left: calc(50% - 100% / 2 - 12px);
+}
+
+.portfolio .portfolio-container .portfolio-card .img-container img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.portfolio .language-container {
+  margin-bottom: 20px;
+}
+
+.portfolio .language-container ul {
+  display: flex;
+  padding: 0;
+}
+
+.portfolio .language-container ul li {
+  list-style: none;
+  border: 1px solid var(--lightgreen);
+  border-radius: 16px;
+  padding: 2px 16px;
+}
+
+.portfolio .language-container ul li + li,
+.portfolio-card + .portfolio-card {
+  margin-left: 10px;
+}
+
+.portfolio p {
+  text-align: left;
+  margin: 0;
+}
+
+.resume {
+  padding-top: 70px;
+}
+
+.resume h1 {
+  text-align: center;
+}
+
+.resume .container {
+  display: flex;
+  justify-content: center;
+  padding: 50px 100px;
+}
+
+.resume .container .image-container img {
+  max-width: 450px;
+}
+
+.resume .container .personal-info-container .personal-info {
+  display: grid;
+  grid-template-columns: 0.75fr 2fr;
+  margin-bottom: 56px;
+}
+
+.resume .container .personal-info-container .personal-info p {
+  margin: 0.2rem;
+}
+
+.contact {
+  max-width: 800px;
+  margin: 100px auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.contact .social-media {
+  max-width: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+footer {
+  text-align: center;
+  font-weight: 100;
+  margin-bottom: 40px;
+}
+@media (max-width: 1100px) {
   header .container {
     width: 100%;
   }
@@ -182,8 +361,44 @@ nav .menu-bar ul a svg {
   .about-me .img-container {
     margin: 70px 0;
   }
+
+  .services .services-container,
+  .portfolio .portfolio-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px 20px 0;
+  }
+
+  .service-card + .service-card,
+  .portfolio-card + .portfolio-card {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .portfolio {
+    height: 100%;
+  }
+
+  .resume .container {
+    padding: 100px 0;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resume .container .image-container {
+    width: 250px;
+  }
+
+  .resume .container .image-container img {
+    width: 100%;
+  }
 }
 @media (max-width: 768px) {
+  .title-blue {
+    margin: 0 0 3rem;
+  }
+
   nav {
     padding: 0 30px;
   }
@@ -207,8 +422,19 @@ nav .menu-bar ul a svg {
     font-size: 85%;
   }
 
-  .about-me {
+  .about-me,
+  .resume {
     padding: 40px;
+  }
+
+  .resume .container .personal-info-container .personal-info {
+    grid-template-columns: 1fr;
+  }
+  .resume .container .personal-info-container .personal-info p:nth-child(odd) {
+    margin: 0 0.5rem;
+  }
+  .resume .container .personal-info-container .personal-info p:nth-child(even) {
+    margin: 0 0.5rem 1rem;
   }
 }
 
@@ -221,6 +447,10 @@ nav .menu-bar ul a svg {
   }
   header .container button {
     margin-top: 1rem;
+  }
+
+  header .container .img {
+    margin-top: 4rem;
   }
 
   nav {
@@ -238,5 +468,22 @@ nav .menu-bar ul a svg {
   nav .menu-bar ul a svg {
     display: block;
     margin: 0 auto 0.5rem;
+  }
+
+  .title-blue {
+    margin-top: 0;
+  }
+
+  .about-me .container {
+    margin-top: 3rem;
+  }
+
+  .services .services-container .service-card {
+    margin-top: 10px;
+    max-width: 320px;
+  }
+
+  footer {
+    margin-bottom: 80px;
   }
 }
